@@ -1,36 +1,37 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Context/AuthProvider';
 // import { AuthContext } from '../../../Contexts/AuthProvider';
 
-// const Navbar = () => {
-//     const { user, logOut } = useContext(AuthContext)
+const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
 
-//     const handleLogOut = () => {
-//         logOut()
-//             .then(() => {
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
 
-//             })
-//             .catch(error => console.error(error));
-//     }
+            })
+            .catch(error => console.error(error));
+    }
 
 
 const menuItems = <React.Fragment>
     <li><Link to="/">Home</Link></li>
     <li><Link to="/appointment">Message</Link></li>
     <li><Link to="/about">About</Link></li>
-    <li><Link to="/login">Login</Link></li>
+    
 
-    {/* {user?.uid ?
+    {user?.uid ?
             <>
-                <li><Link to="/dashboard">Dashboard</Link></li>
-                <li><button onClick={handleLogOut}>Sign Out</button></li>
+                
+                <li><button  onClick={handleLogOut}>Sign Out</button></li>
             </>
 
-            : <li><Link to="/login">Login</Link></li>} */}
+            : <li><Link to="/login">Login</Link></li>}
 </React.Fragment>
 
 
-const Navbar = () => {
+
     return (
         <div className="navbar bg-base-100 flex justify-between bg-info">
             <div className="navbar-start">
