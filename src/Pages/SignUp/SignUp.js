@@ -15,7 +15,7 @@ const SignUp = () => {
         createUser(data.email, data.password)
         .then(result => {
             const user = result.user;
-            reset(user.data)
+            reset();
             console.log(user)
         })
         .catch(error =>console.log(error))

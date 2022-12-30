@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Post = () => {
     return (
         <div>
@@ -27,8 +28,8 @@ const Post = () => {
                                 <label className="label">
                                     <span className="label-text">Upload Image</span>
                                 </label>
-                                <input type="text" placeholder="URI" className="input input-bordered" />
-                            </div>
+                             <input type="file" placeholder="Photo" className="input bg-primary-focus input-bordered" />
+                             </div>
 
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Submit</button>
